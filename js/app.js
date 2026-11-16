@@ -640,11 +640,11 @@ function rmAnswer(s,k){
   {
     const qU=s.toUpperCase(), codes=matCodes();
     for(const c of codes){ if(qU.includes(c)) return matCard(c); }          // full code present
-    const frag=(qU.match(/[A-Z]{0,2}-?RM-?[\dA-Z-]{2,}|\b[\dA-Z]{2,}-[\dA-Z]{2,}-[\dA-Z]+\b/)||[])[0];
+    const frag=(qU.match(/MAT-\d{2,}|[A-Z]{0,2}-?RM-?[\dA-Z-]{2,}|\b[\dA-Z]{2,}-[\dA-Z]{2,}-[\dA-Z]+\b/)||[])[0];
     if(frag){
       const cand=[...codes].filter(c=>c.includes(frag));
       if(cand.length) return matCard(cand[0]) + (cand.length>1?`<div class="mini">${cand.length} codes match “${frag}” — showing the first. Give the full code for an exact line.</div>`:'');
-      if(/RM/.test(frag)) return `<b>🔎 ${frag}</b><div class="mini">No order line found for that material code in the current data (${codes.size} codes loaded). Codes look like <b>P-RM-145-001-00</b>. Try a grade, form, vendor or plant.</div>`;
+      if(/RM|MAT/.test(frag)) return `<b>🔎 ${frag}</b><div class="mini">No order line found for that material code in the current data (${codes.size} codes loaded). Codes look like <b>MAT-0001</b>. Try a grade, form, vendor or plant.</div>`;
     }
   }
   // weighted vendor selection for a grade/form (e.g. "best vendor for 16MNCR5 coil")
