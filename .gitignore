@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local tooling
+.claude/
+
+# Real data must never be committed
+*.xlsx
+*.xls
+*.db
+*.sqlite
+.env
+.env.*
