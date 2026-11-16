@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Executive Intelligence Dashboard"
+abstract: "A zero-install procurement analytics dashboard with vendor scorecards, order explorer and an optional LLM analyst, shipped with anonymized demo data."
+type: software
+authors:
+  - family-names: "Banerjee"
+    given-names: "Swagata"
+repository-code: "https://github.com/gitswagata1/executive-intelligence-dashboard"
+license: MIT
+version: "1.0.0"
+date-released: "2026-11-16"
+keywords:
+  - dashboard
+  - procurement
+  - analytics
+  - chartjs
+  - data-visualization
