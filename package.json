@@ -1,0 +1,17 @@
+{
+  "name": "executive-intelligence-dashboard",
+  "version": "1.0.0",
+  "description": "Zero-install procurement analytics dashboard with anonymized demo data.",
+  "private": true,
+  "license": "MIT",
+  "author": "Swagata Banerjee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitswagata1/executive-intelligence-dashboard.git"
+  },
+  "scripts": {
+    "start": "python -m http.server 8123",
+    "check": "node --check js/app.js",
+    "validate": "node scripts/validate-data.mjs"
+  }
+}
